@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&family=Montserrat:ital,wght@0,500;0,600;1,500;1,600&family=Noto+Sans:wght@400;700&family=Playfair+Display:wght@500&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+body {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+:root {
+  --cor-link: #e86a33;
+  --cor-headerfundo: #263a29;
+}
+
+/*Header*/
+
+header {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  animation: positionheader 2s ease;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+a:hover,
+.menu a.ativo {
+  background: var(--cor-headerfundo);
+  transition: 0.3s all;
+  color: #f9f9f9;
+}
+
+.menu ul {
+  display: flex;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px;
+}
+
+/*Parallax*/
+
+.parallax {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#text {
+  position: absolute;
+  font-size: 5em;
+  color: #263a29;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: fade 1s ease-in-out;
+}
+
+#textp {
+  position: absolute;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 1em;
+  width: 60%;
+  line-height: 25px;
+  text-align: center;
+  color: white;
+  bottom: 320px;
+  animation: fade 2s ease-in-out;
+}
+
+.text {
+  text-align: center;
+  font-size: 5em;
+}
+
+#leaf {
+  animation: positionleaf 2s ease;
+}
+
+.parallax img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.parallax-2 {
+  position: relative;
+  background-color: #003329;
+  padding: 50px;
+  z-index: 200;
+}
+
+.parallax-2 h2 {
+  font-size: 3em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.parallax-2 p {
+  font-size: 1em;
+  color: #fff;
+  font-weight: 300;
+  pointer-events: none;
+}
+
+#hill5 {
+  animation: positionhill5 2.5s ease;
+}
+
+#hill4 {
+  animation: positionhill4 2.4s ease;
+}
+
+#hill1 {
+  animation: positionhill1 2.3s ease;
+}
+
+/*Imagens*/
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex > div {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  align-self: end;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  align-self: end;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.image-description {
+  text-align: center;
+  position: absolute;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Rodapé */
+.rodape {
+  bottom: 0;
+  z-index: 1000;
+  padding: 30px 8%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  color: var(--cor-link);
+  background-color: var(--cor-headerfundo);
+}
+
+/*Animação*/
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes positionleaf {
+  0% {
+    transform: translateY(-5em);
+  }
+
+  100% {
+    transform: translateY(0em);
+  }
+}
+
+@keyframes positionheader {
+  0% {
+    transform: translateY(0.2em);
+  }
+
+  100% {
+    transform: translateY(0em);
+  }
+}
+
+@keyframes positionhill5 {
+  0% {
+    transform: translateX(2em);
+  }
+
+  100% {
+    transform: translateX(0em);
+  }
+}
+
+@keyframes positionhill4 {
+  0% {
+    transform: translateX(-2em);
+  }
+
+  100% {
+    transform: translateX(0em);
+  }
+}
+
+@keyframes positionhill1 {
+  0% {
+    transform: translateY(2em);
+  }
+
+  100% {
+    transform: translateY(0em);
+  }
+}
+
+/*Responsivel*/
+
+@media screen and (max-width: 1920px) {
+  #text {
+    font-size: 4.5em;
+    margin-bottom: 80px;
+  }
+
+  #textp {
+    position: absolute;
+    top: 53%;
+    font-size: 0.8em;
+    margin-bottom: 40px;
+
+  }
+
+  header {
+    position: absolute;
+    margin-top: 16%;
+    max-width: 100%;
+  }
+
+  .overlay {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+
+  .parallax-2 {
+    position: relative;
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .parallax {
+    position: relative;
+  }
+}
